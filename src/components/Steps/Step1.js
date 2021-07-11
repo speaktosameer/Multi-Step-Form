@@ -5,10 +5,10 @@ import React from 'react'
 export default function Step1({state,handleOnChange,handleNext}) {
     return (
         <Paper component={Box} p={2}>
-            <Box mt={1} mb={2}>
+            {/* <Box mt={1} mb={2}>
                         {renderText({ label: "Initial Details" })}
-                        </Box>
-                        <Grid container spacing={2} style={{marginBottom:"10px"}}>
+                        </Box> */}
+                        <Grid container spacing={2} style={{marginBottom:"10px",paddingTop:"20px"}}>
                             <Grid item xs={12} sm={6}>
                             {renderInputText({label:"First Name", name:"firstname", state, handleOnChange})}
                             </Grid>

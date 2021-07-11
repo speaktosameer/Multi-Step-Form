@@ -75,7 +75,8 @@ export const renderSelect = ({label,name,color,state,options,handleOnChange}) =>
 
 export const renderButton = ({label,variant,color,handleOnClick}) => (
 <Button variant={variant ? variant : "outlined"}
-color={color ? color : 'primary'} size="small" onClick={handleOnClick}>{label}</Button>
+color={color ? color : 'primary'}  size="small" onClick={handleOnClick}
+>{label}</Button>
 
 );
 
