@@ -50,16 +50,13 @@ export default function Step2({state,handleOnChange,handleNext,handlePrev}) {
 
                         <Grid container spacing={2} style={{marginBottom:"10px"}}>
                             <Grid item xs={12}>
-                            <FormLabel component="legend">Gender</FormLabel>
-      <RadioGroup row aria-label="gender" name="ftype" value={value} onChange={handleChange}>
-        <FormControlLabel value="female" control={<Radio />} label="Female" />
-        <FormControlLabel value="male" control={<Radio />} label="Male" />
-        <FormControlLabel value="other" control={<Radio />} label="Other" />
-        <FormControlLabel value="disabled" disabled control={<Radio />} label="(Disabled option)" />
-      </RadioGroup>
-
-
-
+                            
+                            <FormLabel component="legend">Flooring Type</FormLabel>
+                            <RadioGroup row aria-label="gender" name="row-radio-buttons-group">
+                                <FormControlLabel value="female" control={<Radio color="default"/>} label="VDF" />
+                                <FormControlLabel value="male" control={<Radio color="default" />} label="Trimax" />
+                                    <FormControlLabel value="other" control={<Radio color="default"/>} label="RCC" />
+                            </RadioGroup>
                             </Grid>
                         </Grid>                
 

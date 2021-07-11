@@ -19,72 +19,121 @@ export default function Step3({state,handleOnChange,handleNext,handlePrev}) {
             {/* <Box mt={1} mb={2}>
                         {renderText({ label: "Initial Details" })}
                         </Box> */}
-                        <Grid container spacing={2} style={{marginBottom:"10px",paddingTop:"20px"}}>
                         <Grid container spacing={2} style={{marginBottom:"10px"}}>
                             <Grid item xs={12}>
                             {renderTextArea({label:"Type of Products not allowedto be stored",name:"tproduct",state,handleOnChange})}
                             </Grid>
                         </Grid>     
-                        </Grid>
-                        <Grid container spacing={2} style={{marginBottom:"10px"}}>
-                            <Grid item xs={12} sm={6}>
-                                {renderText({label:"Additional Information"})}
+
+
+                        <Grid container spacing={2} style={{marginBottom:"10px", paddingLeft:"20px"}}>
+                            <Grid item xs={12} sm={6} style={{fontWeight: "bold" }}>
+                            <Typography variant="h5" component="b">
+                            Additional Information
+                            </Typography>
                             </Grid>
+                            <Grid item xs={6} sm={3} style={{fontWeight: "bold" }}>
+                            <Typography variant="h6" component="h2">
+                            Yes
+                            </Typography>   
+                            </Grid>
+                            <Grid item xs={6} sm={3} style={{fontWeight: "bold" }}>
+                            <Typography variant="h6" component="h2">
+                            No
+                            </Typography>   
+                            </Grid>
+                        </Grid>
+
+
+
+
+                        <Grid container spacing={2} style={{marginBottom:"10px", paddingLeft:"20px"}}>
                             <Grid item xs={12} sm={6}>
-                                <Typography>YesNo</Typography>
+                            <Typography variant="h6" component="h2">
+                            Additional Information
+                            </Typography>
+                            </Grid>
+                            <Grid item xs={6} sm={3}>
+                            <Typography variant="h6" component="h2">
+                            Yes
+                            </Typography>   
+                            </Grid>
+                            <Grid item xs={6} sm={3}>
+                            <Typography variant="h6" component="h2">
+                            No
+                            </Typography>   
+                            </Grid>
+                        </Grid>
+                        <Grid container spacing={2} style={{marginBottom:"10px", paddingLeft:"20px"}}>
+                            <Grid item xs={12} sm={6}>
+                            <Typography variant="h6" component="h2">
+                            Additional Information
+                            </Typography>
+                            </Grid>
+                            <Grid item xs={6} sm={3}>
+                            <Typography variant="h6" component="h2">
+                            Yes
+                            </Typography>   
+                            </Grid>
+                            <Grid item xs={6} sm={3}>
+                            <Typography variant="h6" component="h2">
+                            No
+                            </Typography>   
+                            </Grid>
+                        </Grid>
+                        <Grid container spacing={2} style={{marginBottom:"10px", paddingLeft:"20px"}}>
+                            <Grid item xs={12} sm={6}>
+                            <Typography variant="h6" component="h2">
+                            Additional Information
+                            </Typography>
+                            </Grid>
+                            <Grid item xs={6} sm={3}>
+                            <Typography variant="h6" component="h2">
+                            Yes
+                            </Typography>   
+                            </Grid>
+                            <Grid item xs={6} sm={3}>
+                            <Typography variant="h6" component="h2">
+                            No
+                            </Typography>   
+                            </Grid>
+                        </Grid>    
+                        <Grid container spacing={2} style={{marginBottom:"10px", paddingLeft:"20px"}}>
+                            <Grid item xs={12} sm={6}>
+                            <Typography variant="h6" component="h2">
+                            Additional Information
+                            </Typography>
+                            </Grid>
+                            <Grid item xs={6} sm={3}>
+                            <Typography variant="h6" component="h2">
+                            Yes
+                            </Typography>   
+                            </Grid>
+                            <Grid item xs={6} sm={3}>
+                            <Typography variant="h6" component="h2">
+                            No
+                            </Typography>   
+                            </Grid>
+                        </Grid>    
+                        <Grid container spacing={2} style={{marginBottom:"10px", paddingLeft:"20px"}}>
+                            <Grid item xs={12} sm={6}>
+                            <Typography variant="h6" component="h2">
+                            Additional Information
+                            </Typography>
+                            </Grid>
+                            <Grid item xs={6} sm={3}>
+                            <Typography variant="h6" component="h2">
+                            Yes
+                            </Typography>   
+                            </Grid>
+                            <Grid item xs={6} sm={3}>
+                            <Typography variant="h6" component="h2">
+                            No
+                            </Typography>   
                             </Grid>
                         </Grid>    
 
-
-                        <Grid container spacing={2} style={{marginBottom:"10px"}}>
-                            <Grid item xs={12} sm={6}>
-                            <Typography>Government Approval</Typography>
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                            <RadioGroup row aria-label="gender" name="ftype" value={value} onChange={handleChange}>
-                            <FormControlLabel value="female" control={<Radio />} label="Female" />
-                            <FormControlLabel value="male" control={<Radio />} label="Male" />
-                            </RadioGroup>
-                            </Grid>
-                        </Grid>
-                        
-                        
-                        <Grid container spacing={2} style={{marginBottom:"10px"}}>
-                            <Grid item xs={12} sm={6}>
-                                {renderInputText({label:"Free Space(sq.ft)",name:"fspace",state,handleOnChange})}
-                            </Grid>
-                        </Grid>    
-
-
-
-                        <Grid container spacing={2} style={{marginBottom:"10px"}}>
-                            <Grid item xs={12}>
-                            <FormLabel component="legend">Gender</FormLabel>
-                            <RadioGroup row aria-label="gender" name="ftype" value={value} onChange={handleChange}>
-                            <FormControlLabel value="female" control={<Radio />} label="Female" />
-                            <FormControlLabel value="male" control={<Radio />} label="Male" />
-                            <FormControlLabel value="other" control={<Radio />} label="Other" />
-                            <FormControlLabel value="disabled" disabled control={<Radio />} label="(Disabled option)" />
-                            </RadioGroup>
-
-
-
-                            </Grid>
-                        </Grid>                
-
-
-
-
-
-
-
-
-
-                        <Grid container spacing={2} style={{marginBottom:"10px"}}>
-                            <Grid item xs={12}>
-                            {renderTextArea({label:"Year of WareHouse Construction",name:"yware",state,handleOnChange})}
-                            </Grid>
-                        </Grid>         
+                               
                         <Grid container spacing={2} justify="center">
                         <Box p={2}>
                         {renderButton({label:"Previous", handleOnClick:handlePrev})}
