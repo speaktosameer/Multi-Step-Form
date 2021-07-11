@@ -29,6 +29,26 @@ export const renderInputText = ({label,name,color,state,handleOnChange}) => {
 );
 }
 
+export const renderTextArea = ({label,name,color,state,handleOnChange}) => {
+    const {data,errors}=state;
+    return(
+    <TextField 
+    label={label}
+    multiline
+  rows={3}
+  rowsMax={4}
+    variant="outlined"
+    color={color ? color : 'primary'}
+    name={name}
+    fullWidth={true}
+    size='small'
+    value={data[name]}
+    error={errors[name] ? true : false}
+    helperText={errors[name]}
+    onChange={handleOnChange} />
+);
+}
+
 export const renderSelect = ({label,name,color,state,options,handleOnChange}) => {
     const {data,errors}=state;
     return(

@@ -17,7 +17,7 @@ class formComponent extends Component {
             ware:'',
             city:'',
             location:'',
-            area:''
+            detail:''
         },
         errors:{
         
