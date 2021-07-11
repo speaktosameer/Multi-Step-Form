@@ -73,6 +73,25 @@ export const renderSelect = ({label,name,color,state,options,handleOnChange}) =>
 );
 };
 
+export const renderUpload = ({name,color,state,handleOnChange}) => {
+    const {data,errors}=state;
+    return(
+    <TextField 
+    type="file"
+    variant="outlined"
+    color={color ? color : 'primary'}
+    name={name}
+    fullWidth={true}
+    size='small'
+  rows={3}
+  rowsMax={4}
+    value={data[name]}
+    error={errors[name] ? true : false}
+    helperText={errors[name]}
+    onChange={handleOnChange} />
+);
+}
+
  export const renderRadio =(label,name,color,state,options,handleChange) =>{
     const {data,errors}=state;
      return(

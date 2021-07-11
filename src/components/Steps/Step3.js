@@ -50,88 +50,66 @@ export default function Step3({state,handleOnChange,handleNext,handlePrev}) {
                         <Grid container spacing={2} style={{marginBottom:"10px", paddingLeft:"20px"}}>
                             <Grid item xs={12} sm={6}>
                             <Typography variant="h6" component="h2">
-                            Additional Information
+                            Government Approval
                             </Typography>
                             </Grid>
+                            
                             <Grid item xs={6} sm={3}>
-                            <Typography variant="h6" component="h2">
-                            Yes
-                            </Typography>   
+                            
+                            <RadioGroup>
+                            <FormControlLabel value="yes" control={<Radio color="default"/>} />
+
+                            </RadioGroup>
                             </Grid>
                             <Grid item xs={6} sm={3}>
-                            <Typography variant="h6" component="h2">
-                            No
-                            </Typography>   
+                            <RadioGroup>
+                            <FormControlLabel value="no" control={<Radio color="default"/>} />
+                            </RadioGroup>
                             </Grid>
+                            
                         </Grid>
                         <Grid container spacing={2} style={{marginBottom:"10px", paddingLeft:"20px"}}>
                             <Grid item xs={12} sm={6}>
                             <Typography variant="h6" component="h2">
-                            Additional Information
+                            Power Backup
                             </Typography>
                             </Grid>
+                            
                             <Grid item xs={6} sm={3}>
-                            <Typography variant="h6" component="h2">
-                            Yes
-                            </Typography>   
+                            
+                            <RadioGroup>
+                            <FormControlLabel value="yes" control={<Radio color="default"/>} />
+
+                            </RadioGroup>
                             </Grid>
                             <Grid item xs={6} sm={3}>
-                            <Typography variant="h6" component="h2">
-                            No
-                            </Typography>   
+                            <RadioGroup>
+                            <FormControlLabel value="no" control={<Radio color="default"/>} />
+                            </RadioGroup>
                             </Grid>
+                            
                         </Grid>
                         <Grid container spacing={2} style={{marginBottom:"10px", paddingLeft:"20px"}}>
                             <Grid item xs={12} sm={6}>
                             <Typography variant="h6" component="h2">
-                            Additional Information
+                            Labour Availability
                             </Typography>
                             </Grid>
+                            
                             <Grid item xs={6} sm={3}>
-                            <Typography variant="h6" component="h2">
-                            Yes
-                            </Typography>   
-                            </Grid>
-                            <Grid item xs={6} sm={3}>
-                            <Typography variant="h6" component="h2">
-                            No
-                            </Typography>   
-                            </Grid>
-                        </Grid>    
-                        <Grid container spacing={2} style={{marginBottom:"10px", paddingLeft:"20px"}}>
-                            <Grid item xs={12} sm={6}>
-                            <Typography variant="h6" component="h2">
-                            Additional Information
-                            </Typography>
+                            
+                            <RadioGroup>
+                            <FormControlLabel value="yes" control={<Radio color="default"/>} />
+
+                            </RadioGroup>
                             </Grid>
                             <Grid item xs={6} sm={3}>
-                            <Typography variant="h6" component="h2">
-                            Yes
-                            </Typography>   
+                            <RadioGroup>
+                            <FormControlLabel value="no" control={<Radio color="default"/>} />
+                            </RadioGroup>
                             </Grid>
-                            <Grid item xs={6} sm={3}>
-                            <Typography variant="h6" component="h2">
-                            No
-                            </Typography>   
-                            </Grid>
-                        </Grid>    
-                        <Grid container spacing={2} style={{marginBottom:"10px", paddingLeft:"20px"}}>
-                            <Grid item xs={12} sm={6}>
-                            <Typography variant="h6" component="h2">
-                            Additional Information
-                            </Typography>
-                            </Grid>
-                            <Grid item xs={6} sm={3}>
-                            <Typography variant="h6" component="h2">
-                            Yes
-                            </Typography>   
-                            </Grid>
-                            <Grid item xs={6} sm={3}>
-                            <Typography variant="h6" component="h2">
-                            No
-                            </Typography>   
-                            </Grid>
-                        </Grid>    
+                            
+                        </Grid>
 
                                
                         <Grid container spacing={2} justify="center">
