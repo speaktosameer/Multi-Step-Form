@@ -4,6 +4,10 @@ import {Box,Paper,Grid,withStyles,Stepper,Step,StepLabel} from "@material-ui/cor
 // import { renderText} from './Common/display';
 import { Styles } from './Common/styles';
 import Step1 from './Steps/Step1';
+import Step2 from './Steps/Step2';
+import Step3 from './Steps/Step3';
+import Step4 from './Steps/Step4';
+import Final from './Steps/Final';
 
 
 
@@ -50,16 +54,32 @@ class formComponent extends Component {
             {label:"Additional Details"},
             {label:"Special Remarks"},
 
-        ]
+        ];
+        const getStepsItems = (steps) => {
+            switch(steps){
+                case 0:
+                    return <Step1 state={this.state} handleOnChange={handleOnChange} handleNext={handleNext} />;
+                    case 1:
+                        return <Step2 state={this.state} handleOnChange={handleOnChange} handleNext={handleNext} handlePrev={handlePrev}/>;
+                        case 2:
+                    return <Step3 state={this.state} handleOnChange={handleOnChange} handleNext={handleNext} handlePrev={handlePrev}/>;
+                    case 3:
+                    return <Step4 state={this.state} handleOnChange={handleOnChange} handleNext={handleNext} handlePrev={handlePrev}/>;
+                    case 4:
+                    return <Final state={this.state.data}/>;
+                    default:
+                        return <Step1 state={this.state} handleOnChange={handleOnChange} handleNext={handleNext} />;
+            }
+        };
 
        
         return (
             <Grid container className={classes.formContainer}>
                 <Grid item xs={12} sm={7}>
-                <Paper>
+                <Paper component={Box}>
 
                 
-                <Box p={1} mb={1} component={Paper}>
+                <Box  p={1} mb={1}>
                         {/* {renderText({ label: "Steps Component" })} */}
                         <Stepper activeStep={this.state.currentStep} alternativeLabel>
         {StepperStep.map((item,i) => (
@@ -72,7 +92,8 @@ class formComponent extends Component {
                     </Paper>
                     <Box component={Paper}>
                         <form className={classes.form}>
-                        <Step1 state={this.state} handleOnChange={handleOnChange} handleNext={handleNext}/>
+                        
+                        {getStepsItems(this.state.currentStep)}
                         </form>
                         </Box>
                     </Grid>
