@@ -1,4 +1,4 @@
-import { Typography , TextField ,MenuItem,Button} from "@material-ui/core";
+import { Typography , TextField ,MenuItem,Button,RadioGroup,FormControlLabel,Radio} from "@material-ui/core";
 
 export const renderText = ({ label, color, align, variant}) => (
     <Typography 
@@ -72,6 +72,31 @@ export const renderSelect = ({label,name,color,state,options,handleOnChange}) =>
     </TextField>
 );
 };
+
+ export const renderRadio =(label,name,color,state,options,handleChange) =>{
+    const {data,errors}=state;
+     return(
+        // <FormLabel>{label}}</FormLabel>
+                            <RadioGroup row aria-label="floatingtype" name={name} fullWidth={true}
+                            size='small'
+                            value={data[name]}
+                            error={errors[name] ? true : false} onChange={handleChange}>
+                            {
+                                options.map((item)=> (
+                                    <FormControlLabel value={data[name]} control={<Radio color={color ? color : 'default'}/>} label={label}/>
+                                ))
+                            }
+                            
+                            
+                            
+                            
+                            </RadioGroup>
+     )
+ }
+
+
+
+
 
 export const renderButton = ({label,variant,color,handleOnClick}) => (
 <Button variant={variant ? variant : "outlined"}

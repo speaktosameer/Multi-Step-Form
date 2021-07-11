@@ -1,8 +1,19 @@
 import {Box,Paper,Grid} from "@material-ui/core";
-import { renderText,renderInputText, renderSelect,renderButton,renderTextArea } from '../Common/display';
+import { renderText,renderInputText, renderSelect,renderButton,renderTextArea,renderRadio } from '../Common/display';
 import React from 'react'
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormLabel from '@material-ui/core/FormLabel';
 
 export default function Step2({state,handleOnChange,handleNext,handlePrev}) {
+    const [value, setValue] = React.useState('female');
+
+    const handleChange = (event) => {
+      setValue(event.target.value);
+    };
+
+  
     return (
         <Paper component={Box} p={2}>
             {/* <Box mt={1} mb={2}>
@@ -10,46 +21,62 @@ export default function Step2({state,handleOnChange,handleNext,handlePrev}) {
                         </Box> */}
                         <Grid container spacing={2} style={{marginBottom:"10px",paddingTop:"20px"}}>
                             <Grid item xs={12} sm={6}>
-                            {renderInputText({label:"First Name", name:"firstname", state, handleOnChange})}
+                            {renderSelect({label:"Type",name:"types",options:[{key:'Public WareHouse',value:'publicWareHouse'},{key:'Private WareHouse',value:'privateWareHouse'},{key:'Bonded WareHouse',value:'bondedWareHouse'},{key:'Smart WareHouse',value:'smartWareHouse'}],state,handleOnChange})}
                             </Grid>
                             <Grid item xs={12} sm={6}>
-                            {renderInputText({label:"Last Name",name:"lastname", state, handleOnChange})}
+                            {renderSelect({label:"Type of Roof",name:"troofs",options:[{key:'Gabled Roof',value:'gabledRoof'},{key:'Flat Roof',value:'flatRoof'},,{key:'Hip Roof',value:'hipRoof'},{key:'Gambrel Roof',value:'gambrelRoof'}],state,handleOnChange})}
+                            </Grid>
+                        </Grid>
+                        <Grid container spacing={2} style={{marginBottom:"10px"}}>
+                            <Grid item xs={12} sm={6}>
+                            {renderInputText({label:"Total Area of Plot(sq.ft)", name:"tarea", state, handleOnChange})}
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                            {renderInputText({label:"Buildup Area(sq.ft)",name:"barea", state, handleOnChange})}
                             </Grid>
                         </Grid>
                         
                         
                         <Grid container spacing={2} style={{marginBottom:"10px"}}>
                             <Grid item xs={12} sm={6}>
-                                {renderInputText({label:"Phone Number",name:"phone",state,handleOnChange})}
+                                {renderInputText({label:"Free Space(sq.ft)",name:"fspace",state,handleOnChange})}
                             </Grid>
                             <Grid item xs={12} sm={6}>
-                                {renderInputText({label:"Email",name:"email",state,handleOnChange})}
+                                {renderInputText({label:"Plin Height(ground to floor)",name:"pheight",state,handleOnChange})}
                             </Grid>
-                        </Grid>
+                        </Grid>    
 
-
-                        <Grid container spacing={2} style={{marginBottom:"10px"}}>
-                            <Grid item xs={12} sm={6}>
-                                {renderSelect({label:"Type of WareHouse",name:"ware",options:[{key:'Regular',value:'regular'},{key:'Air Condition',value:'aircondition'}],state,handleOnChange})}
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                {renderInputText({label:"City",name:"city",state,handleOnChange})}
-                            </Grid>
-                        </Grid>
 
 
                         <Grid container spacing={2} style={{marginBottom:"10px"}}>
                             <Grid item xs={12}>
-                            {renderTextArea({label:"Location or Area",name:"location",state,handleOnChange})}
+                            <FormLabel component="legend">Gender</FormLabel>
+      <RadioGroup row aria-label="gender" name="ftype" value={value} onChange={handleChange}>
+        <FormControlLabel value="female" control={<Radio />} label="Female" />
+        <FormControlLabel value="male" control={<Radio />} label="Male" />
+        <FormControlLabel value="other" control={<Radio />} label="Other" />
+        <FormControlLabel value="disabled" disabled control={<Radio />} label="(Disabled option)" />
+      </RadioGroup>
+
+
+
                             </Grid>
-                        </Grid>
+                        </Grid>                
+
+
+
+
+
+
+
+
+
                         <Grid container spacing={2} style={{marginBottom:"10px"}}>
                             <Grid item xs={12}>
-                            {renderTextArea({label:"Detail address of warehouse",name:"detail",state,handleOnChange})}
+                            {renderTextArea({label:"Year of WareHouse Construction",name:"yware",state,handleOnChange})}
                             </Grid>
-                        </Grid>
-
-                        <Grid container spacing={2} justify="flex-end">
+                        </Grid>         
+                        <Grid container spacing={2} justify="center">
                         <Box p={2}>
                         {renderButton({label:"Previous", handleOnClick:handlePrev})}
                         </Box>
@@ -58,6 +85,7 @@ export default function Step2({state,handleOnChange,handleNext,handlePrev}) {
                         </Box>
                             
                         </Grid>
+
 
         </Paper>
     )

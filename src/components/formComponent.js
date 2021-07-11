@@ -21,7 +21,33 @@ class formComponent extends Component {
             ware:'',
             city:'',
             location:'',
-            detail:''
+            detail:'',
+
+            types:'',
+            troofs:'',
+            tarea:'',
+            barea:'',
+            fspace:'',
+            pheight:'',
+            ftype:'',
+            yware:'',
+
+            tproduct:'',
+            gapprove:'',
+            farrangment:'',
+            wfacility:'',
+            pback:'',
+            lavail:'',
+            gplat:'',
+            uplat:'',
+
+
+            comment:'',
+            poware:'',
+            piware:'',
+
+
+
         },
         errors:{
         
@@ -29,6 +55,7 @@ class formComponent extends Component {
         currentStep:0,
     }    
     render() {
+
         const {classes}=this.props;
         const handleOnChange = ({target})=>{
             const {data,errors}=this.state;

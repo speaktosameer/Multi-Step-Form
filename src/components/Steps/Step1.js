@@ -43,13 +43,15 @@ export default function Step1({state,handleOnChange,handleNext}) {
                             {renderTextArea({label:"Location or Area",name:"location",state,handleOnChange})}
                             </Grid>
                         </Grid>
+
+                        
                         <Grid container spacing={2} style={{marginBottom:"10px"}}>
                             <Grid item xs={12}>
                             {renderTextArea({label:"Detail address of warehouse",name:"detail",state,handleOnChange})}
                             </Grid>
                         </Grid>
 
-                        <Grid container spacing={2} justify="flex-end">
+                        <Grid container spacing={2} justify="center">
                         <Box p={2}>
                         {renderButton({label:"Next", handleOnClick:handleNext})}
                         </Box>

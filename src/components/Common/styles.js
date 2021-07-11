@@ -8,7 +8,7 @@ export const Styles = {
         alignItems:"center",
     },
     form:{
-        minHeight:"300px",
+        minHeight:"350px",
     },
 
 }
